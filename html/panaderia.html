@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panadería Super Fritos">
+    <meta name="keywords" content="Adso, cocina, fritos">
+    <title>Super fritos</title>
+
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 15px;
+            border-bottom: 2px solid #000;
+        }
+
+        header img {
+            position: absolute;
+            left: 20px;
+        }
+
+        /* Navegación */
+        nav {
+            border-bottom: 2px solid #000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            /* Distribuye los items como en tu imagen */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Cuerpo Principal (Las 4 columnas de tu imagen) */
+        .grid-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Para que en celulares se acomode uno bajo otro */
+        }
+
+        .column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            /* Cuadros como en tu boceto */
+        }
+
+        /* Sección del Body (Texto central con imágenes) */
+        .content-body {
+            border: 2px solid #000;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .content-body img {
+            border-radius: 8px;
+        }
+
+        /* Pie de página */
+        footer {
+            border-top: 2px solid #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        .galeria-panes {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .galeria-panes h2 {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .grid-galeria {
+            display: grid;
+            /* Crea columnas de mínimo 250px que se ajustan solas */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item-pan {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .item-pan:hover {
+            transform: scale(1.05);
+            /* Efecto de zoom al pasar el mouse */
+        }
+
+        .item-pan img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* Recorta la imagen para que todas midan lo mismo */
+            display: block;
+        }
+
+        .item-pan p {
+            padding: 10px;
+            margin: 0;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="panes.jpg" alt="Logo Superfritos" width="60">
+        <h2>Super fritos</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Conoce Super Fritos</a></li>
+            <li><a href="#">Tienda Virtual</a></li>
+            <li><a href="#apartado-galeria">Galeria</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="grid-container">
+            <div class="column">
+                <h3>Nosotros</h3>
+                <p>Misión<br>Visión<br>Historia<br>Política de la empresa</p>
+            </div>
+
+            <div class="column">
+                <h3>Tienda</h3>
+                <p>Catálogos<br>Productos<br>Haga su pedido</p>
+            </div>
+
+            <div class="column">
+                <img src="panne.jpg" alt="Fritos" width="180">
+            </div>
+
+            <div class="column">
+                <h3>Contacto</h3>
+                <p>WhatsApp<br>Teléfono<br>Correo</p>
+            </div>
+        </section>
+
+        <section class="content-body">
+            <img src="enpanada.jpg" alt="Empanadas" width="150">
+            <div>
+                <h3>Las empanadas y fritos más ricos de tu ciudad</h3>
+                <p>Campo Galán</p>
+            </div>
+            <img src="pann.jpg" alt="Pan" width="150">
+        </section>
+
+        <section id="apartado-galeria" class="galeria-panes">
+            <h2>Nuestra Galería de Panes</h2>
+
+            <div class="grid-galeria">
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1585478259715-876a6a81b7e2?q=80&w=600"
+                        alt="Pan de Masa Madre">
+                    <p>Pan de Masa Madre Artesanal</p>
+                </div>
+
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=600"
+                        alt="Pan de Chocolate">
+                    <p>Pan de Chocolate (Babka)</p>
+                </div>
+
+            </div>
+
+            <div class="grid-galeria">
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600"
+                        alt="Pan Artesanal">
+                    <p>Pan Artesanal</p>
+                </div>
+
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1589367920969-ab8e050be045?q=80&w=600"
+                        alt="Baguette Francés">
+                    <p>Baguette Francés</p>
+                </div>
+
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600" alt="Pan de Dulce">
+                    <p>Pan de Dulce</p>
+                </div>
+
+                <div class="item-pan">
+                    <img src="https://images.unsplash.com/photo-1533749047139-189de3cf06d3?q=80&w=600"
+                        alt="Pan Integral">
+                    <p>Pan Integral de Semillas</p>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>footer - pie de página</p>
+        <div class="social-icons">
+            <span>FB</span> | <span>IG</span> | <span>WA</span>
+        </div>
+        <p>Copyright Carlos Chaparro 2026</p>
+    </footer>
+
+</body>
+
+</html>
